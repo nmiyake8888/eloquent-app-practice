@@ -10,7 +10,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::latest()->get();
-        return view('post.index', ['posts => $posts']);
+        return view('posts.index', ['posts' => $posts]);
     }
 
     public function create()
@@ -18,7 +18,7 @@ class PostController extends Controller
         return view('posts.create');
     }
 
-    public function store(Request $requests)
+    public function store(Request $request)
     {
         Post::create([
             'title' => $request->title,
@@ -31,7 +31,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::findOrFail($id);
-        return view('post.edit', ['post' => $post]);
+        return view('posts.edit', ['post' => $post]);
     }
 
     public function update(Request $request, $id)
