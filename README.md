@@ -12,6 +12,7 @@ LaravelのEloquent ORMを使用して、投稿の一覧表示・新規作成・�
 - Laravel Sail
 - Docker
 - Blade
+- ChatGPT(エラー発生時の補助)
 
 ## 学んだこと
 - Eloquent ORMを使用したデータベース操作（create・find・update・delete）と、モデルを通じたCRUD処理の実装方法
